@@ -24,6 +24,9 @@ for x in range(156):
     adder = sum3 ^ sum5 ^ schaeffer_stroke
     register = (register << 1) | adder
     register = register & 255
+
     register_str = format(register, 'b')
     print(x + 1, ' ', register_str.rjust(8, '0'))
+    if x == 27 or x == 155:
+        print('Шестанадцатиричный код: ', format(register, 'x'), 'такт: ', x + 1)
     i += 1
